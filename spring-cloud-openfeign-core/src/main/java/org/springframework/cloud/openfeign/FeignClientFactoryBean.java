@@ -320,7 +320,10 @@ public class FeignClientFactoryBean
 	 * information
 	 */
 	<T> T getTarget() {
+		//获得FeignCOntext
 		FeignContext context = this.applicationContext.getBean(FeignContext.class);
+		//build feign
+		//		j
 		Feign.Builder builder = feign(context);
 
 		if (!StringUtils.hasText(this.url)) {
